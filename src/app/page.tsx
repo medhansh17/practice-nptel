@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col bg-gray-900 min-h-screen text-white w-full">
-      <h1 className="mx-auto text-[1.5rem] px-4">Placeholder title</h1>
+      <h1 className="mx-auto text-[1.5rem] px-4">NPTEL Practice App</h1>
       <div className="flex flex-col flex-wrap px-4 gap-[20px] mt-4">
         <h1 className="text-2xl">Select a Course :</h1>
         <div className="flex flex-row">

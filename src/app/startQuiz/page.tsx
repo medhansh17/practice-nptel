@@ -74,7 +74,7 @@ export default function StartQuiz() {
             onChange={(e) => setMode(e.target.value)}
           >
             <option value="test">Test</option>
-            <option value="practice">Practice</option>
+            {/* <option value="practice">Practice</option> */}
           </select>
           <label htmlFor="syllabus">Syllabus:</label>
           <select
