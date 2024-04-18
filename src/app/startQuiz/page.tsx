@@ -39,7 +39,7 @@ export default function StartQuiz() {
   }, [courseId]);
 
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="min-h-screen p-4 flex justify-center items-center">
       {courseId && <form
         id="form"
         className="flex flex-col gap-4 w-full max-w-[400px]"
