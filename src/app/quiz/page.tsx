@@ -1,7 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import courseQuestions from "@/utils/courseData";
 import Test from "@/components/test";
 interface data {
   courseId: string | null;
@@ -13,6 +14,7 @@ export default function Quiz() {
   const [data, setData] = useState<data>();
   const router = useRouter();
   const [remainingQuestions, setRemainingQuestions] = useState<number[]>([]);
+  const [currentQuestion, setCurrentQuestion] = useState<any>({});
 
   useEffect(() => {
     const params = new URLSearchParams(document.location.search);
@@ -38,13 +40,22 @@ export default function Quiz() {
     ) {
       router.replace("/");
     }
-
+    // const array = courseQuestions.filter();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
-  return (
-    <div>
-      <Test />
-    </div>
-  );
+  const loadNextQuestion = () => {
+    if (remainingQuestions.length === 0) {
+      redirect("/result");
+    }
+    setCurrentQuestion(remainingQuestions.shift());
+  };
+
+  const shuffleArray = (data: Array<any>) => {
+    const shuffledArray = [...data].sort(() => Math.random() - 0.5);
+    console.log(shuffledArray);
+  };
+
+  const testComponent = () => {};
+  return <div></div>;
 }
