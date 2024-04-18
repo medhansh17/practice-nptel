@@ -10,11 +10,23 @@ interface data {
   syllabus: string | null;
 }
 
+interface question {
+  question: string;
+  options: string[];
+  answer: number[];
+}
+
 export default function Quiz() {
   const [data, setData] = useState<data>();
   const router = useRouter();
-  const [remainingQuestions, setRemainingQuestions] = useState<number[]>([]);
-  const [currentQuestion, setCurrentQuestion] = useState<any>({});
+  const [remainingQuestions, setRemainingQuestions] = useState<question[]>(
+    [] as question[]
+  );
+  const [currentQuestion, setCurrentQuestion] = useState<question>(
+    {} as question
+  );
+  const [score, setScore] = useState(0);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     const params = new URLSearchParams(document.location.search);
@@ -40,22 +52,64 @@ export default function Quiz() {
     ) {
       router.replace("/");
     }
-    // const array = courseQuestions.filter();
+    const array = courseQuestions
+      .filter((course) => course.courseId === Number(data.courseId))[0]
+      .data.filter(
+        (question) => question.module === Number(data.syllabus)
+      )[0].questions;
+    const shuffledArray = shuffleArray(array);
+    setTotal(shuffledArray.length);
+    setRemainingQuestions(shuffledArray);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
-  const loadNextQuestion = () => {
-    if (remainingQuestions.length === 0) {
-      redirect("/result");
+  const loadNextQuestion = (ans: boolean) => {
+    if (ans) {
+      setScore(score + 1);
     }
-    setCurrentQuestion(remainingQuestions.shift());
+    if (remainingQuestions.length === 0) {
+      router.replace(
+        `/result?score=${score}&total=${total}`
+      );
+    }
+    // if (data?.mode === "practice") {
+    //   if (ans === false) {
+    //     setRemainingQuestions([...remainingQuestions, currentQuestion]);
+    //   }
+    // }
+    setCurrentQuestion(remainingQuestions.shift() || ({} as question));
   };
 
-  const shuffleArray = (data: Array<any>) => {
+  useEffect(() => {
+    if (remainingQuestions.length === 0) {
+      return;
+    }
+    loadNextQuestion(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [remainingQuestions]);
+
+  useEffect(() => {
+    displayQuestion();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentQuestion]);
+
+  const displayQuestion = () => {
+    return (
+      <div>
+        <Test
+          question={currentQuestion?.question || " "}
+          answers={currentQuestion?.options || []}
+          correctAnswer={currentQuestion?.answer || []}
+          loadNextQuestion={loadNextQuestion}
+        />
+      </div>
+    );
+  };
+
+  function shuffleArray<T>(data: T[]): T[] {
     const shuffledArray = [...data].sort(() => Math.random() - 0.5);
-    console.log(shuffledArray);
-  };
+    return shuffledArray;
+  }
 
-  const testComponent = () => {};
-  return <div></div>;
+  return <div>{displayQuestion()}</div>;
 }

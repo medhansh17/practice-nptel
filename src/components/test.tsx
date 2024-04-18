@@ -1,35 +1,60 @@
-export default function Test() {
-  const question = "What is the full form of the name Medhansh?";
-  const answers = [
-    "Medhansh is the best boy in the entire universe",
-    "Mehdansh",
-    "Medhansh",
-    "Mehdansh",
-  ];
-  const Correctanswer = [0, 2];
+import { doc } from "firebase/firestore";
+
+export default function Test({
+  question,
+  answers,
+  correctAnswer,
+  loadNextQuestion,
+}: {
+  question: string;
+  answers: string[];
+  correctAnswer: number[];
+  loadNextQuestion: (ans: boolean) => void;
+}) {
+
+  const handleAnswerSelection = (e:any, selectedAnswerIndex: number) => {
+    correctAnswer.map((ans) => 
+      document.getElementById(`${ans}`)?.classList.add("bg-green-500")
+    );
+    if (correctAnswer.includes(selectedAnswerIndex)) {
+      e.target.classList.add("bg-green-500");
+      setTimeout(() => {
+        correctAnswer.map((ans) => 
+          document.getElementById(`${ans}`)?.classList.remove("bg-green-500")
+        );
+        e.target.classList.remove("bg-green-500");
+        loadNextQuestion(true);
+      }, 1000);
+    } else {
+      e.target.classList.add("bg-red-500");
+      setTimeout(() => {
+        correctAnswer.map((ans) => 
+          document.getElementById(`${ans}`)?.classList.remove("bg-green-500")
+        );
+        e.target.classList.remove("bg-red-500");
+        loadNextQuestion(false);
+      }, 1000);
+    }
+  };
+
+  const buttonComponent = (answer: string, index: number) => (
+    <button
+      key={index}
+      id={`${index}`}
+      onClick={(e) => handleAnswerSelection(e, index)}
+      className="p-2 px-4 border rounded-md"
+    >
+      {answer}
+    </button>
+  );
+
   return (
     <div className="min-h-screen w-screen flex justify-center items-center sm:text-3xl text-lg p-4">
       <div>
         <p className="mb-[35px] text-center">{question}</p>
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 sm:text-xl text-sm text-center">
           {answers.map((answer, index) => (
-            <button
-              id={index.toString()}
-              key={index}
-              onClick={(e) => {
-                Correctanswer.includes(index)
-                  ? e.currentTarget.classList.add("border-green-500")
-                  : e.currentTarget.classList.add("border-red-500");
-                Correctanswer.map((correctanswer) => {
-                  document
-                    .getElementById(correctanswer.toString())
-                    ?.classList.add("bg-green-700");
-                });
-              }}
-              className="rounded-lg border-white border p-4"
-            >
-              {answer}
-            </button>
+            buttonComponent(answer, index)
           ))}
         </div>
       </div>
