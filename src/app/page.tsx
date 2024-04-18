@@ -25,7 +25,7 @@ export default function Home() {
           <CourseCards />
         </div>
       </div>
-      {/* <Footer/> */}
+      <Footer />
     </div>
   );
 }

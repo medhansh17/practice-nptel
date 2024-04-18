@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-
+import Test from "@/components/test";
 interface data {
   courseId: string | null;
   mode: string | null;
@@ -39,13 +39,12 @@ export default function Quiz() {
       router.replace("/");
     }
 
-    
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   return (
     <div>
-      <h1>Quiz {data?.courseId}</h1>
+      <Test />
     </div>
   );
 }

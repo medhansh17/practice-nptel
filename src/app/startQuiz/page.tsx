@@ -11,7 +11,6 @@ interface courseType {
 }
 
 export default function StartQuiz() {
-  
   const [mode, setMode] = useState("test");
   const [syllabusOption, setSyllabusOption] = useState("full");
   const [course, setCourse] = useState<courseType>();
@@ -42,6 +41,14 @@ export default function StartQuiz() {
 
   return (
     <div className="min-h-screen p-4 flex justify-center items-center">
+      <button
+        onClick={() => {
+          router.push("/");
+        }}
+        className="absolute top-[20px] left-[20px] border border-gray-400 p-2 rounded-md cursor-hover"
+      >
+        Back
+      </button>
       {courseId && (
         <form
           id="form"
@@ -60,7 +67,7 @@ export default function StartQuiz() {
           <select
             id="mode"
             name="mode"
-            className="text-black p-2 rounded-md cursor-hover"
+            className="text-gray-200 p-2 rounded-md  bg-gray-900 border border-gray-200"
             value={mode}
             required
             defaultValue={"test"}
@@ -74,12 +81,11 @@ export default function StartQuiz() {
             id="syllabus"
             name="syllabus"
             value={syllabusOption}
-            defaultValue={"full"}
-            className="text-black p-2 rounded-md cursor-hover"
+            defaultValue={"Module 1"}
+            className="text-gray-200 p-2 rounded-md  bg-gray-900 border border-gray-200"
             required
             onChange={(e) => setSyllabusOption(e.target.value)}
           >
-            <option value="full">Full</option>
             {course &&
               Array.from(
                 { length: Number(course.totalModules) },
