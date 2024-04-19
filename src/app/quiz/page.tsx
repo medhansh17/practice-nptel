@@ -78,9 +78,9 @@ export default function Quiz() {
     if (remainingQuestions.length === 0) {
       const s = score;
       if (any === false) {
-        router.push(`/result?score=${score}&total=${total}`);
+        router.replace(`/result?score=${score}&total=${total}`);
       } else {
-        router.push(`/result?score=${score+1}&total=${total}`);
+        router.replace(`/result?score=${score + 1}&total=${total}`);
       }
     }
     setCurrentQuestion(remainingQuestions.shift() || ({} as question));
