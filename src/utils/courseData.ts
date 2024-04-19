@@ -690,7 +690,7 @@ const courseQuestions: courseData[] = [
               "harvesting --> regeneration --> stand tending",
               "regeneration --> harvesting --> stand tending",
             ],
-            answer: [2],
+            answer: [1],
           },
           {
             question:

@@ -4,12 +4,12 @@ export default function Test({
   question,
   answers,
   correctAnswer,
-  onAnswer,
+  loadNextQuestion,
 }: {
   question: string;
   answers: string[];
   correctAnswer: number[];
-  onAnswer: (isCorrect: boolean) => void;
+  loadNextQuestion: (ans: boolean) => void;
 }) {
 
   const handleAnswerSelection = (e:any, selectedAnswerIndex: number) => {
@@ -23,7 +23,7 @@ export default function Test({
           document.getElementById(`${ans}`)?.classList.remove("bg-green-500")
         );
         e.target.classList.remove("bg-green-500");
-        onAnswer(true);
+        loadNextQuestion(true);
       }, 1000);
     } else {
       e.target.classList.add("bg-red-500");
@@ -32,7 +32,7 @@ export default function Test({
           document.getElementById(`${ans}`)?.classList.remove("bg-green-500")
         );
         e.target.classList.remove("bg-red-500");
-        onAnswer(false);
+        loadNextQuestion(false);
       }, 1000);
     }
   };
