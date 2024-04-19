@@ -4,6 +4,7 @@ import { redirect, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import courseQuestions from "@/utils/courseData";
 import Test from "@/components/test";
+import { set } from "firebase/database";
 interface data {
   courseId: string | null;
   mode: string | null;
@@ -27,6 +28,7 @@ export default function Quiz() {
   );
   const [score, setScore] = useState(0);
   const [total, setTotal] = useState(0);
+  const [any, setAny] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(document.location.search);
@@ -64,19 +66,24 @@ export default function Quiz() {
   }, [data]);
 
   const loadNextQuestion = (ans: boolean) => {
-    if (ans) {
-      setScore(score + 1);
+    if (ans === true) {
+      console.log("Correct");
+      if (score === 0) {
+        setScore(1);
+        setAny(true);
+      } else {
+        setScore(score + 1);
+      }
     }
+    console.log(score);
     if (remainingQuestions.length === 0) {
-      router.replace(
-        `/result?score=${score}&total=${total}`
-      );
+      const s = score;
+      if (any === false) {
+        router.push(`/result?score=${score}&total=${total}`);
+      } else {
+        router.push(`/result?score=${score+1}&total=${total}`);
+      }
     }
-    // if (data?.mode === "practice") {
-    //   if (ans === false) {
-    //     setRemainingQuestions([...remainingQuestions, currentQuestion]);
-    //   }
-    // }
     setCurrentQuestion(remainingQuestions.shift() || ({} as question));
   };
 
