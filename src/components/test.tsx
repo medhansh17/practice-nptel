@@ -1,5 +1,3 @@
-import { doc } from "firebase/firestore";
-
 export default function Test({
   question,
   answers,

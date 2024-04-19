@@ -4,7 +4,7 @@ export default function Footer() {
       Made with &hearts; by{" "}
       <a href="https://linkedin.com/in/rupaaksrinivas" target="_blank">
         {" "}
-        Rupaak Srinivas
+        Rupaak
       </a>{" "}
       and{" "}
       <a href="https://www.linkedin.com/in/medhansh-jain/" target="_blank">
