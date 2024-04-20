@@ -86,6 +86,9 @@ export default function StartQuiz() {
             required
             onChange={(e) => setSyllabusOption(e.target.value)}
           >
+            {/* <option value="full">Full Portions</option>
+            <option value="first-half">Module 1-6</option>
+            <option value="second-half">Module 7-12</option> */}
             {course &&
               Array.from(
                 { length: Number(course.totalModules) },

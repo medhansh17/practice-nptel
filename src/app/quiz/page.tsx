@@ -27,7 +27,7 @@ export default function Quiz() {
   );
   const [score, setScore] = useState(0);
   const [total, setTotal] = useState(0);
-  const [any, setAny] = useState(false);
+  const [end, setEnd] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(document.location.search);
@@ -41,6 +41,12 @@ export default function Quiz() {
     };
     setData(data);
   }, []);
+
+  useEffect(() => {
+    if (end === false) return;
+    router.replace(`/result?score=${score}&total=${total}`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [end]);
 
   useEffect(() => {
     if (data === undefined) {
@@ -66,22 +72,10 @@ export default function Quiz() {
 
   const loadNextQuestion = (ans: boolean) => {
     if (ans === true) {
-      console.log("Correct");
-      if (score === 0) {
-        setScore(1);
-        setAny(true);
-      } else {
-        setScore(score + 1);
-      }
+      setScore(score + 1);
     }
-    console.log(score);
     if (remainingQuestions.length === 0) {
-      const s = score;
-      if (any === false) {
-        router.replace(`/result?score=${score}&total=${total}`);
-      } else {
-        router.replace(`/result?score=${score + 1}&total=${total}`);
-      }
+      setEnd(true);
     }
     setCurrentQuestion(remainingQuestions.shift() || ({} as question));
   };
