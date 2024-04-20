@@ -9,6 +9,16 @@ export default function Test({
   correctAnswer: number[];
   loadNextQuestion: (ans: boolean) => void;
 }) {
+  // Function to shuffle array
+  const shuffleArray = (array: any[]) => {
+    const newArray = array.slice();
+    for (let i = newArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+  };
+  const shuffledAnswers = shuffleArray(answers);
   const handleAnswerSelection = (e: any, selectedAnswerIndex: number) => {
     correctAnswer.map((ans) =>
       document.getElementById(`${ans}`)?.classList.add("bg-green-500")
@@ -50,7 +60,9 @@ export default function Test({
       <div>
         <p className="mb-[35px] text-center">{question}</p>
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 sm:text-xl text-sm text-center">
-          {answers.map((answer, index) => buttonComponent(answer, index))}
+          {shuffledAnswers.map((answer, index) =>
+            buttonComponent(answer, answers.indexOf(answer))
+          )}
         </div>
       </div>
     </div>
