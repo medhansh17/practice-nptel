@@ -60,7 +60,9 @@ export default function StartQuiz() {
               <h1 className="w-full max-w-[400px] text-[1.5rem] font-semibold text-center">
                 {course?.name}
               </h1>
-              <p className="text-sm mb-10 w-full text-center">**New syllabus options added !!!</p>
+              <p className="text-sm mb-10 w-full text-[#FFD700] text-center">
+                **New modes and syllabus options added !!!
+              </p>
             </>
           )}
           <input type="hidden" name="courseId" value={courseId} />
@@ -76,8 +78,13 @@ export default function StartQuiz() {
             onChange={(e) => setMode(e.target.value)}
           >
             <option value="test">Test</option>
-            {/* <option value="practice">Practice</option> */}
+            <option value="practice">Practice (beta)</option>
           </select>
+          {mode === "practice" && (
+            <p className="text-sm text-red-500">
+              *Wrong questions repeat in the test until you get them right
+            </p>
+          )}
           <label htmlFor="syllabus">Syllabus:</label>
           <select
             id="syllabus"

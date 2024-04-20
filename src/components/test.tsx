@@ -1,3 +1,5 @@
+import { doc } from "firebase/firestore";
+
 export default function Test({
   question,
   answers,
@@ -20,25 +22,29 @@ export default function Test({
   };
   const shuffledAnswers = shuffleArray(answers);
   const handleAnswerSelection = (e: any, selectedAnswerIndex: number) => {
-    correctAnswer.map((ans) =>
-      document.getElementById(`${ans}`)?.classList.add("bg-green-500")
-    );
+    correctAnswer.map((ans) => {
+      document.getElementById(`${ans}`)?.classList.add("bg-green-700");
+    });
     if (correctAnswer.includes(selectedAnswerIndex)) {
-      e.target.classList.add("bg-green-500");
+      e.target.classList.add("bg-green-700");
       setTimeout(() => {
         correctAnswer.map((ans) =>
-          document.getElementById(`${ans}`)?.classList.remove("bg-green-500")
+          document
+            .getElementById(`${ans}`)
+            ?.classList.remove("bg-green-700")
         );
-        e.target.classList.remove("bg-green-500");
+        e.target.classList.remove("bg-green-700");
         loadNextQuestion(true);
       }, 1000);
     } else {
-      e.target.classList.add("bg-red-500");
+      e.target.classList.add("bg-red-700");
       setTimeout(() => {
         correctAnswer.map((ans) =>
-          document.getElementById(`${ans}`)?.classList.remove("bg-green-500")
+          document
+            .getElementById(`${ans}`)
+            ?.classList.remove("bg-green-700")
         );
-        e.target.classList.remove("bg-red-500");
+        e.target.classList.remove("bg-red-700");
         loadNextQuestion(false);
       }, 1000);
     }
@@ -57,14 +63,12 @@ export default function Test({
 
   return (
     <div className="min-h-screen w-screen flex flex-col justify-center items-center sm:text-3xl text-lg p-4">
-      {/* <div> */}
-        <p className="mb-[35px] text-center w-full">{question}</p>
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 sm:text-xl text-sm text-center">
-          {shuffledAnswers.map((answer, index) =>
-            buttonComponent(answer, answers.indexOf(answer))
-          )}
-        </div>
-      {/* </div> */}
+      <p className="mb-[35px] text-center w-full">{question}</p>
+      <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 sm:text-xl text-sm text-center">
+        {shuffledAnswers.map((answer, index) =>
+          buttonComponent(answer, answers.indexOf(answer))
+        )}
+      </div>
     </div>
   );
 }

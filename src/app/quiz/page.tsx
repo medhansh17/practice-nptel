@@ -4,6 +4,7 @@ import { redirect, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import courseQuestions from "@/utils/courseData";
 import Test from "@/components/test";
+import { set } from "firebase/database";
 interface data {
   courseId: string | null;
   mode: string | null;
@@ -44,7 +45,7 @@ export default function Quiz() {
 
   useEffect(() => {
     if (end === false) return;
-    router.replace(`/result?score=${score}&total=${total}`);
+    router.replace(`/result?score=${score}&total=${total}&mode=${data?.mode}`);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [end]);
 
@@ -69,12 +70,14 @@ export default function Quiz() {
       array = courseQuestions
         .filter((course) => course.courseId === Number(data.courseId))[0]
         .data.filter((question) => question.module <= 6)
-        .map((module) => module.questions).flat();
+        .map((module) => module.questions)
+        .flat();
     } else if (data.syllabus === "second-half") {
       array = courseQuestions
         .filter((course) => course.courseId === Number(data.courseId))[0]
         .data.filter((question) => question.module >= 7)
-        .map((module) => module.questions).flat();
+        .map((module) => module.questions)
+        .flat();
     } else {
       array = courseQuestions
         .filter((course) => course.courseId === Number(data.courseId))[0]
@@ -88,21 +91,28 @@ export default function Quiz() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
-  const loadNextQuestion = (ans: boolean) => {
+  const loadNextQuestion = async (ans: boolean | null) => {
     if (ans === true) {
+      remainingQuestions.shift();
       setScore(score + 1);
+    } else if (ans === false) {
+      if (data?.mode === "practice") {
+        setRemainingQuestions(shuffleArray(remainingQuestions));
+      } else {
+        remainingQuestions.shift();
+      }
     }
     if (remainingQuestions.length === 0) {
       setEnd(true);
     }
-    setCurrentQuestion(remainingQuestions.shift() || ({} as question));
+    setCurrentQuestion(remainingQuestions[0] || ({} as question));
   };
 
   useEffect(() => {
     if (remainingQuestions.length === 0) {
       return;
     }
-    loadNextQuestion(false);
+    loadNextQuestion(null);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [remainingQuestions]);
 
