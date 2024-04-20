@@ -59,11 +59,29 @@ export default function Quiz() {
     ) {
       router.replace("/");
     }
-    const array = courseQuestions
-      .filter((course) => course.courseId === Number(data.courseId))[0]
-      .data.filter(
-        (question) => question.module === Number(data.syllabus)
-      )[0].questions;
+    var array = [] as question[];
+    if (data.syllabus === "full") {
+      array = courseQuestions
+        .filter((course) => course.courseId === Number(data.courseId))[0]
+        .data.map((module) => module.questions)
+        .flat();
+    } else if (data.syllabus === "first-half") {
+      array = courseQuestions
+        .filter((course) => course.courseId === Number(data.courseId))[0]
+        .data.filter((question) => question.module <= 6)
+        .map((module) => module.questions).flat();
+    } else if (data.syllabus === "second-half") {
+      array = courseQuestions
+        .filter((course) => course.courseId === Number(data.courseId))[0]
+        .data.filter((question) => question.module >= 7)
+        .map((module) => module.questions).flat();
+    } else {
+      array = courseQuestions
+        .filter((course) => course.courseId === Number(data.courseId))[0]
+        .data.filter(
+          (question) => question.module === Number(data.syllabus)
+        )[0].questions;
+    }
     const shuffledArray = shuffleArray(array);
     setTotal(shuffledArray.length);
     setRemainingQuestions(shuffledArray);

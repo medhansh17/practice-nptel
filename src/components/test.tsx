@@ -49,22 +49,22 @@ export default function Test({
       key={index}
       id={`${index}`}
       onClick={(e) => handleAnswerSelection(e, index)}
-      className="p-2 px-4 border border-gray-400 rounded-md"
+      className="p-2 px-4 border border-gray-400 rounded-md max-w-full min-w-[250px]"
     >
       {answer}
     </button>
   );
 
   return (
-    <div className="min-h-screen w-screen flex justify-center items-center sm:text-3xl text-lg p-4">
-      <div>
-        <p className="mb-[35px] text-center">{question}</p>
+    <div className="min-h-screen w-screen flex flex-col justify-center items-center sm:text-3xl text-lg p-4">
+      {/* <div> */}
+        <p className="mb-[35px] text-center w-full">{question}</p>
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 sm:text-xl text-sm text-center">
           {shuffledAnswers.map((answer, index) =>
             buttonComponent(answer, answers.indexOf(answer))
           )}
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 }

@@ -36,7 +36,6 @@ export default function StartQuiz() {
       (course) => course.id === Number(courseId)
     )[0];
     setCourse(courseFilter);
-    console.log(courseFilter);
   }, [courseId]);
 
   return (
@@ -57,9 +56,12 @@ export default function StartQuiz() {
           onSubmit={handleSubmission}
         >
           {course && (
-            <h1 className="w-full max-w-[400px] text-[1.5rem] font-semibold text-center mb-10">
-              {course?.name}
-            </h1>
+            <>
+              <h1 className="w-full max-w-[400px] text-[1.5rem] font-semibold text-center">
+                {course?.name}
+              </h1>
+              <p className="text-sm mb-10 w-full text-center">**New syllabus options added !!!</p>
+            </>
           )}
           <input type="hidden" name="courseId" value={courseId} />
           <input type="hidden" name="syllabusOption" value={syllabusOption} />
@@ -81,14 +83,14 @@ export default function StartQuiz() {
             id="syllabus"
             name="syllabus"
             value={syllabusOption}
-            defaultValue={"Module 1"}
+            defaultValue={"full"}
             className="text-gray-200 p-2 rounded-md  bg-gray-900 border border-gray-200"
             required
             onChange={(e) => setSyllabusOption(e.target.value)}
           >
-            {/* <option value="full">Full Portions</option>
+            <option value="full">Full Portions</option>
             <option value="first-half">Module 1-6</option>
-            <option value="second-half">Module 7-12</option> */}
+            <option value="second-half">Module 7-12</option>
             {course &&
               Array.from(
                 { length: Number(course.totalModules) },
