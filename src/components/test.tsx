@@ -1,4 +1,3 @@
-import { doc } from "firebase/firestore";
 
 export default function Test({
   question,
@@ -9,7 +8,7 @@ export default function Test({
   question: string;
   answers: string[];
   correctAnswer: number[];
-  loadNextQuestion: (ans: boolean) => void;
+  loadNextQuestion: (_ans: boolean) => void;
 }) {
   // Function to shuffle array
   const shuffleArray = (array: any[]) => {
@@ -65,7 +64,7 @@ export default function Test({
     <div className="min-h-screen w-screen flex flex-col justify-center items-center sm:text-3xl text-lg p-4">
       <p className="mb-[35px] text-center w-full">{question}</p>
       <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 sm:text-xl text-sm text-center">
-        {shuffledAnswers.map((answer, index) =>
+        {shuffledAnswers.map((answer) =>
           buttonComponent(answer, answers.indexOf(answer))
         )}
       </div>

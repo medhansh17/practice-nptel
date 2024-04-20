@@ -1,10 +1,10 @@
 "use client";
 
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import courseQuestions from "@/utils/courseData";
 import Test from "@/components/test";
-import { set } from "firebase/database";
+
 interface data {
   courseId: string | null;
   mode: string | null;
