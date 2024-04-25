@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import courseQuestions from "@/utils/courseData";
 import Test from "@/components/test";
-
+import Head from "next/head";
 interface data {
   courseId: string | null;
   mode: string | null;
@@ -139,5 +139,16 @@ export default function Quiz() {
     return shuffledArray;
   }
 
-  return <div>{displayQuestion()}</div>;
+  return (
+    <>
+      <Head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4918739620805879"
+          crossOrigin="anonymous"
+        ></script>
+      </Head>
+      <div>{displayQuestion()}</div>
+    </>
+  );
 }

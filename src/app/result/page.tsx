@@ -1,5 +1,5 @@
 "use client";
-
+import Head from "next/head";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 export default function Page() {
@@ -18,24 +18,33 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center flex-col">
-      {mode === "test" ? (
-        <h1 className="text-[2rem]">
-          Result {score}/{total}
-        </h1>
-      ) : (
-        <h1 className="text-[2rem] w-full text-center">
-          All Done !! <br /> To test yourself, try out the test mode
-        </h1>
-      )}
-      <button
-        onClick={() => {
-          router.back();
-        }}
-        className="absolute top-[20px] left-[20px] border border-gray-400 p-2 rounded-md cursor-hover"
-      >
-        Back
-      </button>
-    </div>
+    <>
+      <Head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4918739620805879"
+          crossOrigin="anonymous"
+        ></script>
+      </Head>
+      <div className="min-h-screen w-full flex items-center justify-center flex-col">
+        {mode === "test" ? (
+          <h1 className="text-[2rem]">
+            Result {score}/{total}
+          </h1>
+        ) : (
+          <h1 className="text-[2rem] w-full text-center">
+            All Done !! <br /> To test yourself, try out the test mode
+          </h1>
+        )}
+        <button
+          onClick={() => {
+            router.back();
+          }}
+          className="absolute top-[20px] left-[20px] border border-gray-400 p-2 rounded-md cursor-hover"
+        >
+          Back
+        </button>
+      </div>
+    </>
   );
 }

@@ -21,7 +21,11 @@ export default function RootLayout({
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-C89F3H5QQV"
         />
-
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4918739620805879"
+          crossOrigin="anonymous"
+        ></script>
         <Script id="google-analytics">
           {`
               window.dataLayer = window.dataLayer || [];
