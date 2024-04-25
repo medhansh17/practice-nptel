@@ -4,4 +4,9 @@ export const courses = [
     id: 1,
     totalModules: 12,
   },
+  {
+    name: "Conservation Economics",
+    id: 2,
+    totalModules: 10,
+  }
 ];
