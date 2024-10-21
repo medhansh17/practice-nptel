@@ -10,7 +10,7 @@ export default function Home() {
     return (
       <div className="flex w-full flex-wrap">
         {courses.map((course, index) => (
-          <Card key={index} courseId={course.id} courseName={course.name} />
+          <Card key={index} courseId={course.id} courseName={course.name} semester={course.semester} />
         ))}
       </div>
     );
