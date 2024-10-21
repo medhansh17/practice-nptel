@@ -3530,6 +3530,1328 @@ const courseQuestions: courseData[] = [
       },
     ],
   },
+  {
+    courseId: 4,
+    course_name: "Training and Development",
+    data: [
+      {
+        module: 1,
+        questions: [
+          {
+            question:
+              "What is the primary purpose of a needs assessment in the training system?",
+            options: [
+              "To evaluate the training program",
+              "To identify training needs",
+              "To implement training objectives",
+              "To assess employee satisfaction",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "What is the main difference between training and development?",
+            options: [
+              "Training is future-oriented, while development is present-oriented",
+              "Training focuses on personal growth, while development focuses on specific job skills",
+              "Training is for immediate job performance, while development prepares for future roles",
+              "Training is theoretical, while development is practical",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "Which strategy is NOT a part of Training & Development Strategies?",
+            options: ["Cognitive", "Behavioral", "Emotional", "Financial"],
+            answer: [3],
+          },
+          {
+            question:
+              "What does the 'gap' between present competency and required competency indicate?",
+            options: [
+              "The success of the training program",
+              "The individual training needs",
+              "The performance review process",
+              "The financial cost of training",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which of the following is a method for determining training needs?",
+            options: [
+              "Job analysis",
+              "Market analysis",
+              "Financial analysis",
+              "Competitive analysis",
+            ],
+            answer: [0],
+          },
+          {
+            question:
+              "In the training system, what follows after setting training objectives?",
+            options: [
+              "Need assessment",
+              "Implementation",
+              "Evaluation",
+              "Feedback",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which type of training is focused on preparing employees for future job roles?",
+            options: [
+              "On-the-job training",
+              "Internal training",
+              "External training",
+              "Organization development",
+            ],
+            answer: [3],
+          },
+          {
+            question:
+              "Which is NOT a phase in the systematic approach to training?",
+            options: [
+              "Assessment",
+              "Development",
+              "Implementation",
+              "Evaluation",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "What is the focus of emotional strategies in training and development?",
+            options: [
+              "Enhancing technical skills",
+              "Improving cognitive abilities",
+              "Developing emotional intelligence",
+              "Increasing financial knowledge",
+            ],
+            answer: [2],
+          },
+          {
+            question: "What is the final phase in the training system?",
+            options: [
+              "Needs assessment",
+              "Training objectives",
+              "Implementation",
+              "Evaluation",
+            ],
+            answer: [3],
+          },
+        ],
+      },
+      {
+        // Assuming this is the same course ID
+        module: 2,
+        questions: [
+          {
+            question:
+              "What is the first step in the instructional design process?",
+            options: [
+              "Implementation",
+              "Evaluation",
+              "Needs assessment",
+              "Training objectives",
+            ],
+            answer: [2], // Correct answer is "Needs assessment"
+          },
+          {
+            question:
+              "Which of the following is NOT a cause for training needs assessment?",
+            options: [
+              "New technology",
+              "Legislation",
+              "Customer requests",
+              "Increased profits",
+            ],
+            answer: [3], // Correct answer is "Increased profits"
+          },
+          {
+            question:
+              "What involves identifying whether training supports the company’s strategic direction?",
+            options: [
+              "Task analysis",
+              "Organizational analysis",
+              "Person analysis",
+              "Performance appraisal",
+            ],
+            answer: [1], // Correct answer is "Organizational analysis"
+          },
+          {
+            question: "What is the primary goal of performance appraisal?",
+            options: [
+              "To improve employee satisfaction",
+              "To evaluate work-related behaviour and potential",
+              "To increase company profits",
+              "To assess market trends",
+            ],
+            answer: [1], // Correct answer is "To evaluate work-related behaviour and potential"
+          },
+          {
+            question:
+              "Which of the following is NOT an objective of performance appraisal?",
+            options: [
+              "Compensation decisions",
+              "Training and development programs",
+              "Personal growth and development",
+              "Market expansion",
+            ],
+            answer: [3], // Correct answer is "Market expansion"
+          },
+          {
+            question:
+              "Which is NOT a part of the causes and outcomes of needs assessment?",
+            options: [
+              "Legislation",
+              "Customer requests",
+              "New jobs",
+              "Personal interests",
+            ],
+            answer: [3], // Correct answer is "Personal interests"
+          },
+          {
+            question:
+              "Which analysis helps to identify employees who need training and their readiness for training?",
+            options: [
+              "Organizational analysis",
+              "Task analysis",
+              "Person analysis",
+              "Job evaluation",
+            ],
+            answer: [2], // Correct answer is "Person analysis"
+          },
+          {
+            question:
+              "What is the final step in the performance appraisal process?",
+            options: [
+              "Communicating the standards",
+              "Measuring actual performance",
+              "Taking corrective actions",
+              "Comparing actual performance with standards",
+            ],
+            answer: [2], // Correct answer is "Taking corrective actions"
+          },
+          {
+            question:
+              "Which of the following is a primary reason for conducting a needs assessment?",
+            options: [
+              "To reduce training cost",
+              "To ensure alignment with business strategy",
+              "To improve employee satisfaction",
+              "To increase production",
+            ],
+            answer: [1], // Correct answer is "To ensure alignment with business strategy"
+          },
+          {
+            question:
+              "What refers to the process used to determine whether training is necessary?",
+            options: [
+              "Job evaluation",
+              "Performance appraisal",
+              "Needs assessment",
+              "Organizational analysis",
+            ],
+            answer: [2], // Correct answer is "Needs assessment"
+          },
+        ],
+      },
+      {
+        module: 3,
+        questions: [
+          {
+            question:
+              "What refers to the characteristics of the learning environment in training design?",
+            options: [
+              "Training method",
+              "Training design",
+              "Training site",
+              "Training evaluation",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which learner characteristic refers to people's belief that they can successfully learn the training program content?",
+            options: [
+              "Motivation",
+              "Self-efficacy",
+              "Learning style",
+              "Perceived utility",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "According to adult learning principles, adults are motivated by which types of factors?",
+            options: [
+              "Only intrinsic factors",
+              "Only extrinsic factors",
+              "Both intrinsic and extrinsic factors",
+              "Neither intrinsic nor extrinsic factors",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "What instructional strategy involves repeated practice even after a learner has mastered the performance?",
+            options: [
+              "Behavioral modeling",
+              "Overlearning",
+              "Massed practice",
+              "Error-based examples",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which theory of training transfer occurs when the training session content is identical to the job tasks?",
+            options: [
+              "Stimulus generalization approach",
+              "Identical elements theory",
+              "Cognitive theory of transfer",
+              "Social learning theory",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which approach to training transfer emphasizes far transfer?",
+            options: [
+              "Cognitive theory of transfer",
+              "Identical elements theory",
+              "Stimulus generalization approach",
+              "Social learning theory",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "What is the first factor in the model of the transfer process?",
+            options: [
+              "Trainee characteristics",
+              "Work environment",
+              "Training design",
+              "Learning retention",
+            ],
+            answer: [0],
+          },
+          {
+            question:
+              "Which instructional strategy involves sharing what can go wrong when training is not used properly?",
+            options: [
+              "Overlearning",
+              "Error-based examples",
+              "Behavioral modeling",
+              "Immediate confirmation",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which learner characteristic is defined as a person's desire to learn training content?",
+            options: [
+              "Ability to learn",
+              "Self-efficacy",
+              "Motivation",
+              "Perceived utility",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "Which principle of adult learning suggests that adults need to know why they are learning something?",
+            options: [
+              "Self-directed learning",
+              "Need for relevance",
+              "Problem-solving approach",
+              "Need to know",
+            ],
+            answer: [3],
+          },
+        ],
+      },
+      {
+        module: 4,
+        questions: [
+          {
+            question: "What is design thinking generally defined as?",
+            options: [
+              "A theoretical process",
+              "An analytic and creative process",
+              "A practical-only process",
+              "A memorization technique",
+            ],
+            answer: [1],
+          },
+          {
+            question: "Why is design important in the digital age?",
+            options: [
+              "It is a highly valued activity",
+              "It is outdated",
+              "It is only useful for art",
+              "It has no relevance",
+            ],
+            answer: [0],
+          },
+          {
+            question:
+              "Which step of the design process involves understanding the users' needs?",
+            options: [
+              "Application",
+              "Iteration",
+              "Representation",
+              "Investigation",
+            ],
+            answer: [3],
+          },
+          {
+            question:
+              "What does the 'Define' step in the design thinking process entail?",
+            options: [
+              "Building representation of ideas",
+              "Constructing a point of view based on user needs",
+              "Brainstorming solutions",
+              "Testing ideas",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which step of the design process involves creating and testing prototypes to stand up to the demands of development?",
+            options: [
+              "Investigation",
+              "Application",
+              "Representation",
+              "Iteration",
+            ],
+            answer: [3],
+          },
+          {
+            question:
+              "In the design thinking process, what does 'Prototype' mean?",
+            options: [
+              "Learning about your audience",
+              "Brainstorming solutions",
+              "Building a representation of your ideas",
+              "Testing your ideas",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "Which process involves modeling a solution to meet users' needs?",
+            options: [
+              "Iteration",
+              "Application",
+              "Representation",
+              "Investigation",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "'Design for learning' aimed at eliminating lesson plans.",
+            options: ["True", "False"],
+            answer: [1],
+          },
+          {
+            question:
+              "What is a key characteristic of digital native learners?",
+            options: [
+              "Preference for traditional textbooks",
+              "Preference for receiving information from multiple multimedia sources",
+              "Preference for single-tasking",
+              "Preference for delayed rewards",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "What is an example of digital collaboration in education?",
+            options: [
+              "Individual study",
+              "Printed materials",
+              "Online communities and interactive discussion areas",
+              "Written exams",
+            ],
+            answer: [2],
+          },
+        ],
+      },
+      {
+        module: 5,
+        questions: [
+          {
+            question:
+              "Which method is used for developing decision-making skills in executive development?",
+            options: [
+              "Job rotation",
+              "Coaching",
+              "Business game",
+              "Sensitivity training",
+            ],
+            answer: [2],
+          },
+          {
+            question: "What are hands-on methods ideal for?",
+            options: [
+              "Presenting large amounts of information",
+              "Developing specific skills",
+              "Reducing training costs",
+              "Conducting lectures",
+            ],
+            answer: [1],
+          },
+          {
+            question: "What is On-the-Job Training (OJT)?",
+            options: [
+              "Learning outside the work setting",
+              "Learning through lectures",
+              "Learning during work by observing peers or managers",
+              "Learning through online courses",
+            ],
+            answer: [2],
+          },
+          {
+            question: "What does self-directed learning involve?",
+            options: [
+              "Employer-driven training",
+              "Employees taking responsibility for all aspects of their learning",
+              "Formal classroom training",
+              "Group learning",
+            ],
+            answer: [1],
+          },
+          {
+            question: "What is a simulation in training methods?",
+            options: [
+              "A method that represents a real-life situation",
+              "A lecture-based training method",
+              "A passive training method",
+              "A traditional classroom method",
+            ],
+            answer: [0],
+          },
+          {
+            question:
+              "Which training method involves acting out characters assigned to trainees?",
+            options: [
+              "Case study",
+              "Role play",
+              "Business game",
+              "Behavior modelling",
+            ],
+            answer: [1],
+          },
+          {
+            question: "What is the focus of group building methods?",
+            options: [
+              "Individual skill development",
+              "Improving team effectiveness",
+              "Reducing training costs",
+              "Increasing lecture hours",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "What are the three broad categories of traditional training methods?",
+            options: [
+              "Online methods, Offline methods, Hybrid methods",
+              "Formal methods, Informal methods, Experiential methods",
+              "Lecture methods, Discussion methods, Case study methods",
+              "Presentation methods, Hands-on methods, Group building methods",
+            ],
+            answer: [3],
+          },
+          {
+            question:
+              "Which training method involves trainees being passive recipients of information?",
+            options: [
+              "Hands-on methods",
+              "Group building methods",
+              "Presentation methods",
+              "Interactive methods",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "What is a key disadvantage of lecture-based presentation methods?",
+            options: [
+              "They are interactive",
+              "They lack participant involvement",
+              "They are cost-effective",
+              "They use multimedia",
+            ],
+            answer: [1],
+          },
+        ],
+      },
+      {
+        module: 6,
+        questions: [
+          {
+            question:
+              "Which of the following is an element of the group environment in training?",
+            options: [
+              "Relationship among participants",
+              "Training methodology",
+              "Course content",
+              "Duration of the training",
+            ],
+            answer: [0],
+          },
+          {
+            question:
+              "What does functional behavior in a training group refer to?",
+            options: [
+              "Actions that disrupt the training process",
+              "Actions that assist in the task of trainers",
+              "Actions that are unrelated to the training",
+              "Actions that are performed outside the training session",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which of the following is an example of dysfunctional behavior in a training group?",
+            options: [
+              "Providing feedback",
+              "Non-participation in training activities",
+              "Assisting trainers",
+              "Giving support to participants",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "What is the role of a trainer when dealing with a self-seeker participant?",
+            options: [
+              "Ignoring them",
+              "Handling them subtly and discreetly",
+              "Giving them special attention",
+              "Allowing them to lead the group",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "What should a trainer do to engage a detached or disinterested participant?",
+            options: [
+              "Ignoring them",
+              "Establish communication and show empathy",
+              "Assign them more task",
+              "Criticize them publicly",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which type of participant in a training group has a strong urge to dominate or monopolize the time?",
+            options: [
+              "Self-seeker",
+              "Hesitant or shy",
+              "Monopolist or dominator",
+              "Socialiser",
+            ],
+            answer: [2],
+          },
+          {
+            question: "What is a case study used for in training?",
+            options: [
+              "To describe theoretical concepts",
+              "To analyze and critique actions taken in difficult situations",
+              "To evaluate trainee performance",
+              "To outline company policies",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Higher-order intellectual skills such as analysis and evaluation is especially developed through case studies.",
+            options: ["True", "False"],
+            answer: [0],
+          },
+          {
+            question:
+              "What is an important factor to consider when reviewing pre-existing cases?",
+            options: [
+              "Length of the case",
+              "Relevance to the trainee's work situation",
+              "Popularity of the case",
+              "Author of the case",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which institution is known for providing a wide variety of business management case studies?",
+            options: [
+              "Harvard Business School",
+              "MIT",
+              "Stanford University",
+              "Yale University",
+            ],
+            answer: [0],
+          },
+        ],
+      },
+      {
+        module: 7,
+        questions: [
+          {
+            question:
+              "Which of the following is a characteristic of business games?",
+            options: [
+              "There are no rules limiting participant behavior.",
+              "The game involves a contest among trainees or teams.",
+              "There are no alternative courses of action available to trainees",
+              "The game is designed to confuse participants.",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "During debriefing, which of the following questions might a trainer ask?",
+            options: [
+              "How did the score of the game affect your behaviour and the behaviour of the team?",
+              "Did you enjoy the game?",
+              "What was your favourite part of the game?",
+              "How would you rate the game on a scale of 1 to 10?",
+            ],
+            answer: [0],
+          },
+          {
+            question: "What is a potential disadvantage of business games?",
+            options: [
+              "They are always too easy for participants.",
+              "Some people reject them as childish and do not participate fully.",
+              "They always lead to team conflict.",
+              "They are not engaging enough.",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "What is one of the key concepts reinforced during the Harley-Davidson game?",
+            options: [
+              "The importance of individual performance",
+              "How to build a motorcycle",
+              "The need for strategic thinking",
+              "The basics of customer service",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "What is the primary objective of using business games in management training?",
+            options: [
+              "To replace traditional lectures",
+              "To provide hands-on experience",
+              "To assess theoretical knowledge",
+              "To reduce training costs",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "What is one of the elements that facilitators can change between rounds in the Harley-Davidson game?",
+            options: [
+              "The location of the dealership",
+              "The business hours",
+              "Interest rates",
+              "The type of motorcycles sold",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "Which aspect is crucial for trainers when conducting the business game?",
+            options: [
+              "Ensuring the game has multiple levels",
+              "Providing a detailed introduction and briefing",
+              "Limiting participant interactions",
+              "Maintaining a strict time limit",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "What is one of the problems that might be discussed during the evaluation session of a business game?",
+            options: [
+              "Technical glitches in the game",
+              "Patterns of behavior within teams",
+              "Personal conflicts outside the game",
+              "The graphical quality of the game",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Why is it important for a trainer to be fully familiar with the various aspects of the game?",
+            options: [
+              "To create new rules on the fly",
+              "To deal immediately with any situation that arises",
+              "To ensure the game runs longer than planned",
+              "To replace the game if needed",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "The effectiveness of a business game can be maximized by relating it to real-life situations.",
+            options: ["True", "False"],
+            answer: [0],
+          },
+        ],
+      },
+      {
+        module: 8,
+        questions: [
+          {
+            question: "What distinguishes role plays from simulations?",
+            options: [
+              "Role plays provide detailed information about the situation.",
+              "Role plays focus on interpersonal responses.",
+              "Role plays require physical responses.",
+              "Role plays have well-defined models of reality.",
+            ],
+            answer: [1],
+          },
+          {
+            question: "Which of the following is NOT a use of role play?",
+            options: [
+              "Demonstrating specific behaviors",
+              "Increasing involvement of the group",
+              "Memorizing theoretical concepts",
+              "Experimenting in a no-risk setting",
+            ],
+            answer: [2],
+          },
+          {
+            question: "What is the purpose of reverse role-play?",
+            options: [
+              "To simplify the role-playing process",
+              "To help participants understand and respect each other's viewpoints",
+              "To eliminate the need for debriefing",
+              "To allow participants to create their own scripts",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "How is spontaneous role-play different from other types?",
+            options: [
+              "It requires extensive preparation and scripting.",
+              "It limits the number of participants to two.",
+              "It has participants act without any prior preparation or scripts.",
+              "It focuses solely on physical responses.",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "A common tool used in technology-based training is __________.",
+            options: [
+              "E-learning platforms",
+              "Printed manuals",
+              "Face-to-face workshops",
+              "Telephone calls.",
+            ],
+            answer: [0],
+          },
+          {
+            question:
+              "Which of the following is a benefit of using technology in training?",
+            options: [
+              "It requires less initial investment",
+              "It provides a standardized training experience",
+              "It reduces the need for participant interaction",
+              "It eliminates the need for assessments",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "A potential challenge mentioned in the document regarding the use of technology in training is technical issues and accessibility.",
+            options: ["True", "False"],
+            answer: [0],
+          },
+          {
+            question:
+              "What is one way that technology supports continuous learning in organizations?",
+            options: [
+              "By offering one-time training sessions",
+              "By limiting access to external training content.",
+              "By focusing only on mandatory training requirements",
+              "By providing access to a wide range of online resources and courses",
+            ],
+            answer: [3],
+          },
+          {
+            question:
+              "What does a high score on the Least Preferred Co-Worker (LPC) Questionnaire indicate?",
+            options: [
+              "Task-oriented leadership style",
+              "Relationship-oriented leadership style",
+              "Production-oriented leadership style",
+              "Employee-oriented leadership style",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "In Fiedler's Contingency Model, what does 'position power' refer to?",
+            options: [
+              "The leader's ability to inspire employees",
+              "Influence derived from one's formal structural position in the organization",
+              "The level of trust between the leader and subordinates",
+              "The complexity of job assignments",
+            ],
+            answer: [1],
+          },
+        ],
+      },
+      {
+        module: 9,
+        questions: [
+          {
+            question:
+              "What is the primary purpose of behavior modeling in training?",
+            options: [
+              "To provide theoretical knowledge",
+              "To develop organizational policies",
+              "To assess trainee performance",
+              "To demonstrate key behaviors for trainees to replicate",
+            ],
+            answer: [3],
+          },
+          {
+            question: "What is vicarious reinforcement?",
+            options: [
+              "When a trainee receives direct feedback",
+              "When a trainee sees a model receiving reinforcement for certain behaviors",
+              "When a trainer provides additional training materials",
+              "When a trainee practices behaviors alone",
+            ],
+            answer: [1],
+          },
+          {
+            question: "Behavior modeling is based on Social Learning Theory.",
+            options: ["True", "False"],
+            answer: [0],
+          },
+          {
+            question:
+              "What is the first step in developing a behavior modeling training program?",
+            options: [
+              "Creating the modeling display",
+              "Providing opportunities for practice",
+              "Determining tasks that are not adequately performed due to lack of skill",
+              "Evaluating the effectiveness of the program",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "What does application planning in behavior modeling aim to do?",
+            options: [
+              "Increase theoretical knowledge",
+              "Enhance transfer of training to the job",
+              "Provide entertainment",
+              "Test trainees’ memory",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which activity is NOT part of a behavior modeling training program?",
+            options: [
+              "Watching a video that presents key behaviors",
+              "Participating in role plays and practice",
+              "Developing organizational policies",
+              "Receiving feedback on performance of key behaviors",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "Which of the following is a key behavior displayed in role play according to the lecture?",
+            options: [
+              "Technical skills",
+              "Creativity",
+              "Physical strength",
+              "Analytical reasoning",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "________ is essential for effective problem-solving and decision-making.",
+            options: [
+              "Collaboration",
+              "Physical agility",
+              "Technical skills",
+              "Financial acumen",
+            ],
+            answer: [0],
+          },
+          {
+            question:
+              "What is the primary purpose of a cost-benefit analysis in training programs?",
+            options: [
+              "To determine the best training methods",
+              "To evaluate the economic benefits of a training program",
+              "To assess trainer performance",
+              "To measure trainee satisfaction",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "How can a company identify benefits of a training program?",
+            options: [
+              "Through anecdotal evidence from employees",
+              "By observing successful job performers",
+              "By reducing the number of training sessions",
+              "By eliminating follow-up evaluations",
+            ],
+            answer: [1],
+          },
+        ],
+      },
+      {
+        module: 10,
+        questions: [
+          {
+            question: "What is the primary definition of decision-making?",
+            options: [
+              "The selection of a course of action from among alternatives",
+              "Identifying problems within an organization.",
+              "Analyzing the outcomes of past decisions",
+              "Communicating decisions to employees",
+            ],
+            answer: [0],
+          },
+          {
+            question:
+              "What does 'bounded rationality' refer to in decision-making?",
+            options: [
+              "Making decisions without any limitations",
+              "Limitations of information, time, and certainty that restrict rationality",
+              "Making decisions based on complete information",
+              "The process of choosing the optimal alternative",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "What is the principle of the limiting factor in decision-making?",
+            options: [
+              "Selecting the easiest course of action",
+              "Avoiding difficult decisions.",
+              "Recognizing and overcoming factors that stand critically in the way of a goal",
+              "Always choosing the least expensive option",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "What is the goal of marginal analysis in decision-making?",
+            options: [
+              "To compare the total costs and total benefits",
+              "To focus on qualitative factors only.",
+              "To eliminate unnecessary alternatives",
+              "To compare additional revenues and additional costs arising from increasing output",
+            ],
+            answer: [3],
+          },
+          {
+            question:
+              "What does 'satisficing' mean in the context of decision-making?",
+            options: [
+              "Choosing the optimal alternative regardless of circumstances",
+              "Selecting a course of action that is satisfactory or good enough under the circumstances",
+              "Making decisions based on complete and perfect information",
+              "Delaying decisions until more information is available",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "In decision-making, what role do qualitative factors play?",
+            options: [
+              "They are intangible factors that are difficult to measure numerically.",
+              "They are the only factors considered in rational decision-making.",
+              "They have no impact on the decision-making process",
+              "They are always less important than quantitative factors",
+            ],
+            answer: [0],
+          },
+          {
+            question:
+              "What are the three approaches managers can use when selecting from among alternatives?",
+            options: [
+              "Intuition, Experimentation, Analysis",
+              "Experimentation, Analysis, Intuition",
+              "Intuition, Experience, Analysis",
+              "Experience, Experimentation, Research and Analysis",
+            ],
+            answer: [3],
+          },
+          {
+            question:
+              "Which decision-making style involves a leader seeking input from the group but making the final decision themselves?",
+            options: [
+              "Autocratic style",
+              "Participative style",
+              "Individual consultative style",
+              "Group decision style",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "Exercise can help in improving decision-making skills by allowing participants to practice making decisions in a controlled environment.",
+            options: ["True", "False"],
+            answer: [0],
+          },
+          {
+            question:
+              "Why should trainers ensure that exercises are relevant to the participants' job roles?",
+            options: [
+              "To ensure maximum engagement and applicability of skills learned",
+              "To reduce the time required for the training",
+              "To make the training more theoretical",
+              "To limit the number of participants",
+            ],
+            answer: [0],
+          },
+        ],
+      },
+      {
+        module: 11,
+        questions: [
+          {
+            question:
+              "What is the primary goal of group-building methods in training?",
+            options: [
+              "To improve individual skills",
+              "To evaluate employee performance.",
+              "To improve team or group effectiveness",
+              "To reduce training costs",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "What is an important guideline for successful experiential training programs?",
+            options: [
+              "Use only visual learning modes",
+              "Keep trainees within their comfort zones",
+              "Tie the program to a specific business problem",
+              "Avoid asking trainees for input on program goals",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "Which group activity involves a structured but informal exchange of knowledge and ideas?",
+            options: [
+              "Brainstorming",
+              "Group discussion",
+              "Panel discussion",
+              "Role-playing",
+            ],
+            answer: [1],
+          },
+          {
+            question: "What is the purpose of a panel discussion in training?",
+            options: [
+              "To provide individual feedback",
+              "To present views and opinions on a specific topic through a panel of experts",
+              "To facilitate one-on-one mentoring",
+              "To conduct practical exercises",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which step is NOT part of organizing a brainstorming session?",
+            options: [
+              "Generation of ideas",
+              "Posting all ideas on a flip chart",
+              "Conducting individual assessments",
+              "Consolidation of ideas and action planning",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "What role does a facilitator play in a brainstorming session?",
+            options: [
+              "Dominating the discussion",
+              "Encouraging participation and managing the flow of ideas",
+              "Limiting the number of ideas generated",
+              "Providing all the solutions",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "True or False: Domination by a few members is a key feature of an effective group discussion.",
+            options: ["True", "False"],
+            answer: [1],
+          },
+          {
+            question:
+              "What is the primary purpose of a panel discussion as a training method?",
+            options: [
+              "To provide individual feedback",
+              "To present views and opinions on a specific topic through a panel of experts",
+              "To facilitate one-on-one mentoring",
+              "To conduct practical exercises",
+            ],
+            answer: [1],
+          },
+          {
+            question: "What is a common problem with panel discussions?",
+            options: [
+              "They always lead to immediate solutions",
+              "They are often too structured, leading to minimal learner participation",
+              "They lack any form of structure",
+              "They guarantee active participation from all attendees",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "What role does the moderator play in a panel discussion?",
+            options: [
+              "They guide the discussion and manage the flow of the session",
+              "They dominate the discussion",
+              "They provide all the answers",
+              "They participate as a panelist",
+            ],
+            answer: [0],
+          },
+        ],
+      },
+      {
+        module: 12,
+        questions: [
+          {
+            question:
+              "Which of the following is NOT a dimension of empowering leadership according to Ahearne, Mathieu, and Rapp (2005)?",
+            options: [
+              "Enhancing the meaningfulness of work",
+              "Fostering participation in decision making",
+              "Expressing confidence in high performance",
+              "Providing financial incentives",
+            ],
+            answer: [3],
+          },
+          {
+            question:
+              "Which behaviour is ______ NOT part of empowering leadership?",
+            options: [
+              "Delegation",
+              "Coordination",
+              "Micromanagement",
+              "Information Sharing",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "Which of the following is a characteristic of a loyal employee?",
+            options: [
+              "Frequently changing jobs",
+              "Promoting the company to customers and community",
+              "Disregarding company policies",
+              "Avoiding participation in company activities",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which of the following is a step in organizing the use of standard scales in training?",
+            options: [
+              "Introducing unrelated topics",
+              "Collecting responses on the standard scale",
+              "Ignoring participant feedback",
+              "Avoiding discussion of scores",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "What is a potential problem in generating employee loyalty?",
+            options: [
+              "Vision for the company is clear but not for the employee",
+              "High employee turnover",
+              "Lack of job security",
+              "Limited career opportunities",
+            ],
+            answer: [0],
+          },
+          {
+            question:
+              "What is the purpose of customizing a standard scale for training?",
+            options: [
+              "To change the theoretical framework",
+              "To match the scale to the industry and nature of the participants",
+              "To reduce the length of the scale",
+              "To eliminate certain dimensions",
+            ],
+            answer: [1],
+          },
+          {
+            question: "What is a key behaviour of empowering leaders?",
+            options: [
+              "Micromanagement",
+              "Delegation and coordination",
+              "Limiting information sharing",
+              "Focusing on personal benefits",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "What do the 'service element and location' dimension of employee loyalty refer to?",
+            options: [
+              "Commitment to customer service and the physical location of the company",
+              "Financial incentives provided to employees",
+              "Opportunities for remote work",
+              "Social activities organized by the company",
+            ],
+            answer: [0],
+          },
+          {
+            question:
+              "What is the final step in using standard scales effectively in training?",
+            options: [
+              "Conducting follow-up interviews",
+              "Sending a detailed report to the organization",
+              "Repeating the training session",
+              "Ignoring the results of the training",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Conducting training evaluations helps improve overall work quality.",
+            options: ["True", "False"],
+            answer: [0],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export default courseQuestions;
