@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "NPTEL Practice App",
   description: "A web application to practice NPTEL questions.",
 };
@@ -17,6 +16,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta title="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>{metadata.title}</title>
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta name="description" content={metadata.description} />
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-C89F3H5QQV"
@@ -35,6 +40,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
+
       <body className={`${inter.className}  bg-gray-900 text-gray-200`}>
         {children}
       </body>

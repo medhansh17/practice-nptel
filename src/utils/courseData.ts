@@ -3871,6 +3871,104 @@ const courseQuestions: courseData[] = [
             ],
             answer: [3],
           },
+          {
+            question:
+              "Which of the following refers to factors built into the training program to increase the chances that transfer of training will occur?",
+            options: [
+              "Training evaluation",
+              "Training design",
+              "Training need",
+              "Training organization",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which one of the following is one of the elements of instructional strategies in designing a training program?",
+            options: [
+              "Practice/feedback",
+              "Opportunity",
+              "Learning styles",
+              "Self-efficacy",
+            ],
+            answer: [0],
+          },
+          {
+            question: "A room where training will be conducted is called as ……",
+            options: [
+              "Trainer's accommodation",
+              "Trainees' accommodation",
+              "Training site",
+              "Training structure",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "Which of the following is one of the principles of adult learning?",
+            options: [
+              "No motivation by extrinsic and intrinsic factors",
+              "Have need to be self-directed",
+              "No problem-solving approach to learning",
+              "No use of work-related experience into work process",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "People learn best if _____ and ______ are given as soon as possible after training.",
+            options: [
+              "Action, Reinforcement",
+              "Punishment, feedback",
+              "Feedback, Responses",
+              "Reinforcement, Feedback",
+            ],
+            answer: [3],
+          },
+          {
+            question:
+              "Checking of the bounce or absorption of sound from the walls, ceiling, floor and furniture is called as …….",
+            options: ["Glare", "Acoustics", "Sitting arrangements", "Lighting"],
+            answer: [1],
+          },
+          {
+            question: "How many strategies are there in conflict management?",
+            options: ["Six", "Four", "Eight", "Five"],
+            answer: [3],
+          },
+          {
+            question:
+              "Which of the following is not one of the purposes of training and development?",
+            options: [
+              "Performance improvement",
+              "Disobeying company rules and policies",
+              "Upgrading skills",
+              "Solving problems",
+            ],
+            answer: [1],
+          },
+          {
+            question:
+              "Which training program focuses on short-term courses that would help employees learn about the latest developments in their respective fields?",
+            options: [
+              "Skills training",
+              "Team training",
+              "Refreshers training",
+              "Cross-functional training",
+            ],
+            answer: [2],
+          },
+          {
+            question:
+              "What does strategic framework approach imply in the Human Resource Management approaches for training and development?",
+            options: [
+              "Development of those skills and competencies in employees, that are unique and superior to competitors, leading to competitive advantage",
+              "Dependency relationship between training and business strategy of the firm",
+              "Training is an investment in HR that gives returns in the form of increased productivity",
+              "To improve the socialization of employees in the organization",
+            ],
+            answer: [0],
+          },
         ],
       },
       {

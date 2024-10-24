@@ -21,6 +21,6 @@ export const courses = [
     name: "Training of Trainers",
     id: 4,
     semester: "FallSem 24-25",
-    totalModules: 12,
+    totalModules: 13,
   },
 ];
