@@ -22,6 +22,7 @@ export default function RootLayout({
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta name="description" content={metadata.description} />
+        <link rel="icon" href="/favicon.ico" />
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-C89F3H5QQV"
