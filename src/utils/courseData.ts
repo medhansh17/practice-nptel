@@ -129,99 +129,104 @@ const courseQuestions: courseData[] = [
         module: 2,
         questions: [
           {
-            question: "In the context of plant nutrition, boron is?",
+            question: "Lithosere is an example of",
             options: [
-              "macronutrient",
-              "micronutrient",
-              "primary nutrient",
-              "secondary nutrient",
+              "Hydrosere",
+              "Xerosere",
+              "Psammosere",
+              "Halosere",
             ],
             answer: [1],
           },
           {
-            question:
-              "The art and science of cultivating forest crops is called?",
+            question: "Which of these depicts correctly the lithosere primary succession?",
             options: [
-              "foresticulture",
-              "monoculture",
-              "silviculture",
-              "silvics",
-            ],
-            answer: [2],
-          },
-          {
-            question:
-              "The climax near Tindi village is being controlled by disturbance by cattle. This is an example of?",
-            options: [
-              "climatic climax",
-              "edaphic climax",
-              "disclimax",
-              "catastrophic climax",
-            ],
-            answer: [2],
-          },
-          {
-            question:
-              "Which of these is not a characteristic of pioneer species?",
-            options: [
-              "ability to grow on bare rocks",
-              "ability to tolerate extreme temperatures",
-              "large size",
-              "short life span",
-            ],
-            answer: [2],
-          },
-          {
-            question:
-              "Which of these depicts correctly the lithosere primary succession?",
-            options: [
-              "rock --> crustose lichen --> foliose lichen --> moss --> herbaceous stage --> shrub --> woodland --> climax",
-              "rock --> foliose lichen --> crustose lichen --> moss --> herbaceous stage --> shrub --> woodland --> climax",
-              "moss --> crustose lichen --> foliose lichen --> rock --> herbaceous stage --> shrub --> woodland --> climax",
+              "Rock → Crustose lichen → Foliose lichen → Moss → Herbaceous stage → Shrub → Woodland → Climax",
+              "Rock → Foliose lichen → Crustose lichen → Moss → Herbaceous stage → Shrub → Woodland → Climax",
+              "Moss → Crustose lichen → Foliose lichen → Rock → Herbaceous stage → Shrub → Woodland → Climax",
+              "Rock → Crustose lichen → Foliose lichen → Shrub → Herbaceous stage → Moss → Woodland → Climax",
             ],
             answer: [0],
           },
           {
-            question:
-              "The study of life history/ general features of forest crops with respect to environmental factors is called?",
+            question: "At compensation point,",
             options: [
-              "foresticulture",
-              "monoculture",
-              "silviculture",
-              "silvics",
+              "Photosynthesis = respiration",
+              "Photosynthesis > respiration",
+              "Photosynthesis < respiration",
+              "None of these",
+            ],
+            answer: [0],
+          },
+          {
+            question: "The study of life history / general features of forest crops with respect to environmental factors is called",
+            options: [
+              "ForestiCulture",
+              "Monoculture",
+              "Silviculture",
+              "Silvics",
             ],
             answer: [3],
           },
           {
-            question: "Net primary productivity is given by?",
-            options: ["APAR + LUE", "APAR X LUE", "APAR - LUE", "APAR / LUE"],
+            question: "A climax caused by wildfires is an example of",
+            options: [
+              "Climatic climax",
+              "Edaphic climax",
+              "Disclimax",
+              "Catastrophic climax",
+            ],
+            answer: [3],
+          },
+          {
+            question: "Net primary productivity is given by",
+            options: [
+              "APAR + LUE",
+              "APAR X LUE",
+              "APAR - LUE",
+              "APAR ÷ LUE",
+            ],
             answer: [1],
           },
           {
-            question: "A climax caused by wildfires is an example of?",
+            question: "Practical application of scientific, technical and economic principles of forestry comes under which branch of forestry ?",
             options: [
-              "climatic climax",
-              "edaphic climax",
-              "disclimax",
-              "catastrophic climax",
-            ],
-            answer: [3],
-          },
-          {
-            question:
-              "Practical application of scientific, technical and economic principles of forestry comes under which branch of forestry?",
-            options: [
-              "forest management",
-              "forest economics",
-              "forest mensuration",
-              "forest protection",
+              "Forest management",
+              "Forest economics",
+              "Forest mensuration",
+              "Forest protection",
             ],
             answer: [0],
           },
           {
-            question: "Which of these is an abiotic factor?",
-            options: ["vines", "trees", "reptiles", "water"],
-            answer: [3],
+            question: "In the context of plant nutrition, boron is",
+            options: [
+              "Macronutrient",
+              "Micronutrient",
+              "Primary nutrient",
+              "Secondary nutrient",
+            ],
+            answer: [1],
+          },
+          {
+            question: "Which of these is not a characteristic of pioneer species",
+            options: [
+              "Ability to grow on bare rocks",
+              "Ability to tolerate extreme temperatures",
+              "Large size",
+              "Short life span",
+            ],
+            answer: [2],
+          },
+          {
+            question: "The climax near Tindni village is being controlled by disturbance by cattle. This is an example of",
+            options: [
+              "Climatic climax",
+              "Edaphic climax",
+              "Disclimax",
+              "Catastrophic climax",
+            ],
+            answer: [2],
           },
         ],
       },
@@ -229,102 +234,102 @@ const courseQuestions: courseData[] = [
         module: 3,
         questions: [
           {
-            question: "Regur is a term for?",
+            question: "Mechanical action of ocean waves is an example of",
             options: [
-              "black cotton soil",
-              "alluvial soil",
-              "saline soil",
-              "red and yellow soil",
-            ],
-            answer: [0],
-          },
-          {
-            question: "Carbonation is an example of?",
-            options: [
-              "chemical weathering",
-              "physical weathering",
-              "biological weathering",
-              "none of these",
-            ],
-            answer: [0],
-          },
-          {
-            question: "Banger is a type of?",
-            options: [
-              "black cotton soil",
-              "alluvial soil",
-              "saline soil",
-              "red and yellow soil",
+              "Chemical weathering",
+              "Physical weathering",
+              "Biological weathering",
+              "None of the above",
             ],
             answer: [1],
           },
           {
-            question: "Cryofracturing is an example of?",
+            question: "Khadar is a type of",
             options: [
-              "chemical weathering",
-              "physical weathering",
-              "biological weathering",
-              "none of these",
+              "Black cotton soil",
+              "Alluvial soil",
+              "Saline soil",
+              "Red and yellow soil",
             ],
             answer: [1],
           },
           {
-            question: "In soil profile, C refers to?",
+            question: "In soil profile, C refers to",
             options: [
-              "organic surface layer",
-              "topsoil layer",
-              "subsoil layer",
-              "substratum layer",
+              "Organic surface layer",
+              "Topsoil layer",
+              "Subsoil layer",
+              "Substratum layer",
             ],
             answer: [3],
           },
           {
-            question: "Vertical arrangement of soil horizon is called?",
+            question: "Regur is a term for",
             options: [
-              "soil texture",
-              "soil structure",
-              "soil profile",
-              "soil science",
-            ],
-            answer: [2],
-          },
-          {
-            question: "Thermal stresses lead to?",
-            options: [
-              "chemical weathering",
-              "physical weathering",
-              "biological weathering",
-              "none of these",
-            ],
-            answer: [1],
-          },
-          {
-            question: "Khadar is a type of?",
-            options: [
-              "black cotton soil",
-              "alluvial soil",
-              "saline soil",
-              "red and yellow soil",
-            ],
-            answer: [1],
-          },
-          {
-            question: "Hydrolysis is an example of?",
-            options: [
-              "chemical weathering",
-              "physical weathering",
-              "biological weathering",
-              "none of these",
+              "Black cotton soil",
+              "Alluvial soil",
+              "Saline soil",
+              "Red and yellow soil",
             ],
             answer: [0],
           },
           {
-            question: "Which of these has the highest organic matter content?",
+            question: "Bangar is a type of",
             options: [
-              "peaty soil",
-              "alluvial soil",
-              "saline soil",
-              "red and yellow soil",
+              "Black cotton soil",
+              "Alluvial soil",
+              "Saline soil",
+              "Red and yellow soil",
+            ],
+            answer: [1],
+          },
+          {
+            question: "Soil formation is dependent upon",
+            options: [
+              "Vegetation",
+              "Time",
+              "Climate",
+              "All of the above",
+            ],
+            answer: [3],
+          },
+          {
+            question: "Thermal stresses lead to",
+            options: [
+              "Chemical weathering",
+              "Physical weathering",
+              "Biological weathering",
+              "None of the above",
+            ],
+            answer: [1],
+          },
+          {
+            question: "Carbonation is an example of",
+            options: [
+              "Chemical weathering",
+              "Physical weathering",
+              "Biological weathering",
+              "None of the above",
+            ],
+            answer: [0],
+          },
+          {
+            question: "Cryofracturing is an example of",
+            options: [
+              "Chemical weathering",
+              "Physical weathering",
+              "Biological weathering",
+              "None of the above",
+            ],
+            answer: [1],
+          },
+          {
+            question: "Hydrolysis is an example of",
+            options: [
+              "Chemical weathering",
+              "Physical weathering",
+              "Biological weathering",
+              "None of the above",
             ],
             answer: [0],
           },
@@ -334,86 +339,103 @@ const courseQuestions: courseData[] = [
         module: 4,
         questions: [
           {
-            question:
-              "Measurement of height based on similar triangles comes under?",
+            question: "For absolute form factor, the reference for the base of the cylinder is",
             options: [
-              "similar measurement",
-              "dissimilar measurement",
-              "direct measurement",
-              "indirect measurement",
+              "Base of the tree",
+              "Breast height",
+              "10% of tree height",
+              "20% of tree height",
             ],
-            answer: [3],
+            answer: [0],
           },
           {
-            question:
-              "For normal form factor, the reference of the base of the cylinder is?",
+            question: "For normal form factor, the reference for the base of the cylinder is",
             options: [
-              "base of the tree",
-              "breast height",
+              "Base of the tree",
+              "Breast height",
               "10% of tree height",
               "20% of tree height",
             ],
             answer: [2],
           },
           {
-            question:
-              "In a triangle, the angle between base and hypotenuse, theta= 60 degree and the hypotenuse c = 2cm. Find the length of the base b?",
-            options: ["0.33", "0.5", "0.75", "1"],
-            answer: [3],
-          },
-          {
-            question:
-              "3 trees are located in a sample plot of 15m X 15m. Their dbh are as under: dbh= 25cm, 30cm, 35cm. Find the stand basal area in sq m per Ha?",
-            options: ["9.6", "14.6", "21.6", "27.6"],
-            answer: [0],
-          },
-          {
-            question:
-              "Consider a stand of eucalyptus, trees that are on average 30cm in diameter and spaced on a regular 3m grid. Find the spacing factor?",
-            options: ["5", "10", "15", "data insufficient"],
-            answer: [1],
-          },
-          {
-            question:
-              "For a tree with dbh= 45.6cm, height= 27m and total stem volume of 1.78cum, the artificial form factor of the tree is:",
-            options: ["0.1", "0.2", "0.3", "0.4"],
-            answer: [3],
-          },
-          {
-            question:
-              "For the absolute form factor, the reference for the base of the cylinder is?",
+            question: "In India, the breast height is considered to be",
             options: [
-              "base of the tree",
-              "breast height",
-              "10% of the height",
-              "20% of the height",
+              "1.37 m",
+              "1.47 m",
+              "1.57 m",
+              "2.47 m",
             ],
             answer: [0],
           },
           {
-            question:
-              "Diameter over bark (dob), diameter under bark (dub), and the bark thickness (tb) are related as?",
+            question: "Measurement of height based on similar triangles comes under:",
+            options: [
+              "Similar measurement",
+              "Dissimilar measurement",
+              "Direct measurement",
+              "Indirect measurement",
+            ],
+            answer: [3],
+          },
+          {
+            question: "For a tree with dbh = 45.6 cm, height = 27 m and total stem volume of 1.78 cum, the artificial form factor for the tree is:",
+            options: [
+              "0.1",
+              "0.2",
+              "0.3",
+              "0.4",
+            ],
+            answer: [3],
+          },
+          {
+            question: "Consider a stand of eucalyptus trees that are on average 30 cm in diameter and spaced on a regular 3 m grid. Find the spacing factor.",
+            options: [
+              "5",
+              "10",
+              "15",
+              "Data insufficient",
+            ],
+            answer: [1],
+          },
+          {
+            question: "Diameter over bark (dob), diameter under bark (dub) and bark thickness (tb) are related as:",
             options: [
               "dob = dub + tb",
               "dob = dub - tb",
-              "dob = dub + 2 X tb",
-              "dob = dub - 2 X tb",
+              "dob = dub + 2 × tb",
+              "dob = dub - 2 × tb",
             ],
             answer: [2],
           },
           {
-            question: "Choose the correct statement?",
+            question: "For false form factor, the reference for the base of the cylinder is",
             options: [
-              "For a non-circular section, girth tape over-estimates the sectional area",
-              "For a non-circular section, girth tape under-estimates the sectional area",
-              "For a non-circular section, girth tape correctly estimates the sectional area",
-              "None of these is a correct statement",
+              "Base of the tree",
+              "Breast height",
+              "10% of tree height",
+              "20% of tree height",
+            ],
+            answer: [1],
+          },
+          {
+            question: "Choose the correct statement:",
+            options: [
+              "For a non-circular cross-section, girth tape over-estimates the sectional area.",
+              "For a non-circular cross-section, girth tape under-estimates the sectional area.",
+              "For a non-circular cross-section, girth tape correctly estimates the sectional area.",
+              "None of these is a correct statement.",
             ],
             answer: [0],
           },
           {
-            question: "A tree has dbh of 25cm. Find the basal area in sq m?",
-            options: [".049", ".096", ".149", ".195"],
+            question: "A tree has dbh of 25 cm. Find its basal area in sq m.",
+            options: [
+              ".049",
+              ".096",
+              ".149",
+              ".195",
+            ],
             answer: [0],
           },
         ],
