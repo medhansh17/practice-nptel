@@ -51,14 +51,14 @@ const courseQuestions: courseData[] = [
             answer: [0],
           },
           {
-            question: "Montane sub-tropical forests do not involve",
+            question: "According to the Supreme Court, the word forest must be understood according to its",
             options: [
-              "Broadleaved forests",
-              "Pine forests",
-              "Semi-evergreen forests",
-              "Dry evergreen forests",
+              "Biological meaning",
+              "Ecological meaning",
+              "Silvicultural meaning",
+              "Dictionary meaning",
             ],
-            answer: [2],
+            answer: [3],
           },
           {
             question:
