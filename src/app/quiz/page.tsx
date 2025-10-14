@@ -2,9 +2,11 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import courseQuestions from "@/utils/courseData";
 import Test from "@/components/test";
 import Head from "next/head";
+import type { courseData as CourseData } from "@/utils/courseData";
+
+// Your interfaces remain the same
 interface data {
   courseId: string | null;
   mode: string | null;
@@ -20,15 +22,15 @@ interface question {
 export default function Quiz() {
   const [data, setData] = useState<data>();
   const router = useRouter();
-  const [remainingQuestions, setRemainingQuestions] = useState<question[]>(
-    [] as question[]
-  );
+  const [remainingQuestions, setRemainingQuestions] = useState<question[]>([]);
   const [currentQuestion, setCurrentQuestion] = useState<question>(
     {} as question
   );
   const [score, setScore] = useState(0);
   const [total, setTotal] = useState(0);
   const [end, setEnd] = useState(false);
+
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const params = new URLSearchParams(document.location.search);
@@ -50,93 +52,96 @@ export default function Quiz() {
   }, [end]);
 
   useEffect(() => {
-    if (data === undefined) {
+    if (!data?.courseId || !data.syllabus || !data.mode) {
+      if (data && (!data.courseId || !data.syllabus || !data.mode)) {
+        router.replace("/");
+      }
       return;
     }
-    if (
-      data?.mode === null ||
-      data?.syllabus === null ||
-      data?.courseId === null
-    ) {
-      router.replace("/");
-    }
-    var array = [] as question[];
-    if (data.syllabus === "full") {
-      array = courseQuestions
-        .filter((course) => course.courseId === Number(data.courseId))[0]
-        .data.map((module) => module.questions)
-        .flat();
-    } else if (data.syllabus === "first-half") {
-      array = courseQuestions
-        .filter((course) => course.courseId === Number(data.courseId))[0]
-        .data.filter((question) => question.module <= 6)
-        .map((module) => module.questions)
-        .flat();
-    } else if (data.syllabus === "second-half") {
-      array = courseQuestions
-        .filter((course) => course.courseId === Number(data.courseId))[0]
-        .data.filter((question) => question.module >= 7)
-        .map((module) => module.questions)
-        .flat();
-    } else {
-      array = courseQuestions
-        .filter((course) => course.courseId === Number(data.courseId))[0]
-        .data.filter(
-          (question) => question.module === Number(data.syllabus)
-        )[0].questions;
-    }
-    const shuffledArray = shuffleArray(array);
-    setTotal(shuffledArray.length);
-    setRemainingQuestions(shuffledArray);
+
+    const fetchAndProcessData = async () => {
+      try {
+        setIsLoading(true);
+        const response = await fetch(`/data/${data.courseId}.json`);
+        if (!response.ok) {
+          throw new Error("Course not found");
+        }
+        const courseData: CourseData = await response.json();
+
+        let array: question[] = [];
+        if (data.syllabus === "full") {
+          array = courseData.data.map((module) => module.questions).flat();
+        } else if (data.syllabus === "first-half") {
+          array = courseData.data
+            .filter((module) => module.module <= courseData.data.length / 2)
+            .map((module) => module.questions)
+            .flat();
+        } else if (data.syllabus === "second-half") {
+          array = courseData.data
+            .filter((module) => module.module >= courseData.data.length / 2)
+            .map((module) => module.questions)
+            .flat();
+        } else {
+          const moduleData = courseData.data.find(
+            (m) => m.module === Number(data.syllabus)
+          );
+          array = moduleData ? moduleData.questions : [];
+        }
+
+        if (array.length === 0) {
+          console.error("No questions found for this syllabus.");
+          router.replace("/");
+          return;
+        }
+
+        const shuffledArray = shuffleArray(array);
+        setTotal(shuffledArray.length);
+        setRemainingQuestions(shuffledArray);
+        setCurrentQuestion(shuffledArray[0]);
+      } catch (error) {
+        console.error("Failed to load course data:", error);
+        router.replace("/");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchAndProcessData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
-  const loadNextQuestion = async (ans: boolean | null) => {
+  const loadNextQuestion = (ans: boolean) => {
+    let currentScore = score;
     if (ans === true) {
-      remainingQuestions.shift();
-      setScore(score + 1);
-    } else if (ans === false) {
-      if (data?.mode === "practice") {
-        setRemainingQuestions(shuffleArray(remainingQuestions));
-      } else {
-        remainingQuestions.shift();
-      }
+      currentScore += 1;
+      setScore(currentScore);
     }
-    if (remainingQuestions.length === 0) {
+
+    const newRemainingQuestions = remainingQuestions.slice(1);
+
+    if (ans === false && data?.mode === "practice") {
+      const wrongQuestion = remainingQuestions[0];
+      setRemainingQuestions(
+        shuffleArray([...newRemainingQuestions, wrongQuestion])
+      );
+    } else {
+      setRemainingQuestions(newRemainingQuestions);
+    }
+
+    if (newRemainingQuestions.length === 0) {
       setEnd(true);
+    } else {
+      setCurrentQuestion(newRemainingQuestions[0]);
     }
-    setCurrentQuestion(remainingQuestions[0] || ({} as question));
-  };
-
-  useEffect(() => {
-    if (remainingQuestions.length === 0) {
-      return;
-    }
-    loadNextQuestion(null);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [remainingQuestions]);
-
-  useEffect(() => {
-    displayQuestion();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentQuestion]);
-
-  const displayQuestion = () => {
-    return (
-      <div>
-        <Test
-          question={currentQuestion?.question || " "}
-          answers={currentQuestion?.options || []}
-          correctAnswer={currentQuestion?.answer || []}
-          loadNextQuestion={loadNextQuestion}
-        />
-      </div>
-    );
   };
 
   function shuffleArray<T>(data: T[]): T[] {
     const shuffledArray = [...data].sort(() => Math.random() - 0.5);
     return shuffledArray;
+  }
+
+  if (isLoading) {
+    return <div>Loading Quiz...</div>;
   }
 
   return (
@@ -148,7 +153,16 @@ export default function Quiz() {
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <div>{displayQuestion()}</div>
+      <div>
+        {currentQuestion.question && (
+          <Test
+            question={currentQuestion.question}
+            answers={currentQuestion.options}
+            correctAnswer={currentQuestion.answer}
+            loadNextQuestion={loadNextQuestion}
+          />
+        )}
+      </div>
     </>
   );
 }

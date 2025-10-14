@@ -21,12 +21,18 @@ export const courses = [
     name: "Training of Trainers",
     id: 4,
     semester: "FallSem 24-25",
-    totalModules: 13,
+    totalModules: 12,
   },
   {
     name: "Forests and their Management",
     id: 5,
     semester: "WinterSem 24-25",
     totalModules: 12,
+  },
+  {
+    name: "Wild Life Ecology",
+    id: 6,
+    semester: "FallSem 25-26",
+    totalModules: 11,
   },
 ];

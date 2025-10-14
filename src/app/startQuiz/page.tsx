@@ -86,7 +86,7 @@ export default function StartQuiz() {
               onChange={(e) => setMode(e.target.value)}
             >
               <option value="test">Test</option>
-              <option value="practice">Practice (beta)</option>
+              <option value="practice">Practice</option>
             </select>
             {mode === "practice" && (
               <p className="text-sm text-red-500">
@@ -104,8 +104,8 @@ export default function StartQuiz() {
               onChange={(e) => setSyllabusOption(e.target.value)}
             >
               <option value="full">Full Portions</option>
-              <option value="first-half">Module 1-6</option>
-              <option value="second-half">Module 7-12</option>
+              <option value="first-half">First Half Modules</option>
+              <option value="second-half">Second Half Modules</option>
               {course &&
                 Array.from(
                   { length: Number(course.totalModules) },
